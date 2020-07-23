@@ -28,4 +28,6 @@ build:
   stage: build
 
   script:
+    - echo $CI_JOB_ID
+    - echo $CI_JOB_STAGE
     - packer build packer.json
