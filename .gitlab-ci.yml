@@ -12,7 +12,6 @@ before_script:
    - unzip packer_1.6.0_linux_amd64.zip
    - mv packer /usr/local/bin/
    - pwd
-   - packer
    - packer -v
 
 stages:
