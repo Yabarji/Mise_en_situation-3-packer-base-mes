@@ -22,7 +22,10 @@ validate:
   stage: validate
 
   script:
-    - packer validate packer.json
+    - packer validate \
+        -var `organization_id` \
+        -var `api_token` \
+        packer.json 
 
 build:
   stage: build
