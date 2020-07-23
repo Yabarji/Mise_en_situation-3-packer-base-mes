@@ -23,8 +23,7 @@ validate:
 
   script:
     - packer validate \
-        -var `organization_id` \
-        -var `api_token` \
+        -syntaxe-only \
         packer.json 
 
 build:
