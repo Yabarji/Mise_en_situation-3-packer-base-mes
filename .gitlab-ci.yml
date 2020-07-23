@@ -23,7 +23,7 @@ validate:
 
   script:
     - packer validate \
-        -syntaxe-only \
+        -syntax-only \
         packer.json 
 
 build:
