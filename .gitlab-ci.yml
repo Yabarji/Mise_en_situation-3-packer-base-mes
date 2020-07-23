@@ -28,4 +28,4 @@ build:
   stage: build
 
   script:
-    - packer build packerfile.json
+    - packer build packer.json
