@@ -13,7 +13,6 @@
 	  "region": "par1",
 	  "commercial_type": "DEV1-M",
 	  "ssh_username": "root"
-  
     }
   ],
   "provisioners": [
