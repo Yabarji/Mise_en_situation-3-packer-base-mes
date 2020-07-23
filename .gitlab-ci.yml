@@ -1,0 +1,36 @@
+---
+image:
+  name: "hashicorp/terraform:0.12.29"
+
+  entrypoint:
+   - "/usr/bin/env"
+   - "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+
+before_script:
+   - sudo apt-get update && sudo apt-get install -y unzip
+   - curl https://releases.hashicorp.com/packer/1.6.0/packer_1.6.0_linux_amd64.zip -o /tmp/packer/packer.zip
+   - cd /tmp/packer/
+   - unzip packer.zip
+   - sudo mv packer /usr/local/bin/
+   - pwd
+   - cd ~/packer-mes/
+   - pwd
+   - rm -rf /tmp/packer/
+   - packer
+   - packer -v
+
+stages:
+  - validate
+  - build
+
+validate:
+  stage: validate
+
+  script:
+    - packer validate packer.json
+
+build:
+  stage: build
+
+  script:
+    - packer build packerfile.json
