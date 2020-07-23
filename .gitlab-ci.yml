@@ -8,6 +8,7 @@ image:
 
 before_script:
    - sudo apt-get update && sudo apt-get install -y unzip
+   - mkdir /tmp/packer/
    - curl https://releases.hashicorp.com/packer/1.6.0/packer_1.6.0_linux_amd64.zip -o /tmp/packer/packer.zip
    - cd /tmp/packer/
    - unzip packer.zip
