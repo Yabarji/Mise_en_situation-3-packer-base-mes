@@ -22,9 +22,7 @@ validate:
   stage: validate
 
   script:
-    - packer validate \
-        -syntax-only \
-        packer.json 
+    - packer validate -syntax-only packer.json 
 
 build:
   stage: build
