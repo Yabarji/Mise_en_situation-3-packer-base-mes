@@ -8,7 +8,7 @@ image:
 
 before_script:
    - sudo apt-get update && sudo apt-get install -y unzip
-   - mwget https://releases.hashicorp.com/packer/1.6.0/packer_1.6.0_linux_amd64.zip
+   - wget https://releases.hashicorp.com/packer/1.6.0/packer_1.6.0_linux_amd64.zip
    - unzip packer_1.6.0_linux_amd64.zip
    - sudo mv packer /usr/local/bin/
    - pwd
