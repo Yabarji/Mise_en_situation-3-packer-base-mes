@@ -1,6 +1,6 @@
 {
   "description": "Mise en situation 3 - Packer Example",
-  "min_packer_version": "1.3.5",
+  "min_packer_version": "1.6.0",
   "builders": [
     {
       "name": "packer-ingecloud-01",
