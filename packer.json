@@ -9,7 +9,7 @@
       "organization_id": "{{user `organization_id`}}",
       "api_token": "{{user `api_token`}}",
       "image": "f974feac-abae-4365-b988-8ec7d1cec10d",
-      "image_name": "packer-ingecloud-01",
+      "image_name": "packer-ingecloud-01 {{user `CI_JOB_ID`}}",
       "region": "{{user `region`}}",
       "commercial_type": "DEV1-M",
       "ssh_username": "root"
@@ -28,8 +28,9 @@
   ],
   "variables": {
     "user_name":"packer-form",
-    "organization_id": "{{env `organization_id`}}",
-    "api_token": "{{env `api_token`}}",
-    "region":"par1"
+    "organization_id": "{{env `ORGANIZATION_ID`}}",
+    "api_token": "{{env `API_TOKEN`}}",
+    "region":"par1",
+    "CI_JOB_ID": "{{env `CI_JOB_ID`}}"
   }
 }
