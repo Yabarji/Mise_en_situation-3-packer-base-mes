@@ -17,8 +17,9 @@ validate:
 
   script:
     - validate -syntax-only packer.json
+    - packer -v
 build:
   stage: build
   script:
     - pwd
-    - build packer.json
+    - packer build packer.json
