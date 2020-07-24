@@ -29,7 +29,7 @@
   "variables": {
     "organization_id": "{{env `SCW_DEFAULT_ORGANIZATION_ID`}}",
     "api_token": "{{env `SCW_SECRET_KEY`}}",
-    "region":"par1",
+    "region": "par1",
     "CI_JOB_ID": "{{env `CI_JOB_ID`}}"
   }
 }
