@@ -27,7 +27,7 @@
     }
   ],
   "variables": {
-    "user_name":"packer-form",
+    "user_name": "packerform",
     "organization_id": "{{env `SCW_DEFAULT_ORGANIZATION_ID`}}",
     "api_token": "{{env `SCW_SECRET_KEY`}}",
     "region":"par1",
