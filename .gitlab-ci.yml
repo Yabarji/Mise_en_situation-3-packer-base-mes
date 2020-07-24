@@ -2,9 +2,6 @@
 image:
   name: "hashicorp/packer"
 
-before_script:
-   - pwd
-
 stages:
   - validate
   - build
@@ -18,5 +15,4 @@ validate:
 build:
   stage: build
   script:
-    - pwd
     - build packer.json
