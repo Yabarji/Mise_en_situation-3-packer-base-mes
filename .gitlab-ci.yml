@@ -19,4 +19,5 @@ stages:
 build:
   stage: build
   script:
+    - pwd
     - packer build packer.json
