@@ -7,7 +7,6 @@ image:
 
 before_script:
    - pwd
-   - -v
 
 stages:
   - validate
