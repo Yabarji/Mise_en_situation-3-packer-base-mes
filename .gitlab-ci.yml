@@ -1,9 +1,6 @@
 ---
 image:
   name: "hashicorp/packer"
-  entrypoint:
-   - "/usr/bin/env"
-   - "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 
 before_script:
    - pwd
@@ -17,9 +14,9 @@ validate:
 
   script:
     - validate -syntax-only packer.json
-    - packer -v
+    - -v
 build:
   stage: build
   script:
     - pwd
-    - packer build packer.json
+    - build packer.json
