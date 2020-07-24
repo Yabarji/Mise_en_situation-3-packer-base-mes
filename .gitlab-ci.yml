@@ -14,7 +14,7 @@ validate:
 
   script:
     - validate -syntax-only packer.json
-    - -v
+
 build:
   stage: build
   script:
