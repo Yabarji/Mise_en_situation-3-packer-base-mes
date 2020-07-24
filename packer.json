@@ -28,8 +28,8 @@
   ],
   "variables": {
     "user_name":"packer-form",
-    "organization_id": "{{env `ORGANIZATION_ID`}}",
-    "api_token": "{{env `API_TOKEN`}}",
+    "organization_id": "{{env `SCW_DEFAULT_ORGANIZATION_ID`}}",
+    "api_token": "{{env `SCW_SECRET_KEY`}}",
     "region":"par1",
     "CI_JOB_ID": "{{env `CI_JOB_ID`}}"
   }
