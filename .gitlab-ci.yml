@@ -14,8 +14,14 @@ before_script:
    - packer -v
 
 stages:
+  - validate
   - build
 
+validate:
+  stage: validate
+
+  script:
+    - packer validate -syntax-only packer.json
 build:
   stage: build
   script:
