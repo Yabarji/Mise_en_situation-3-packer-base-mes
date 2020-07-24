@@ -15,19 +15,10 @@ before_script:
    - packer -v
 
 stages:
-  - validate
   - build
-
-validate:
-  stage: validate
-
-  script:
-    - packer validate -syntax-only packer.json 
 
 build:
   stage: build
 
   script:
-    - echo $CI_JOB_ID
-    - echo $CI_JOB_STAGE
     - packer build packer.json

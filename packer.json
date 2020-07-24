@@ -5,14 +5,14 @@
     {
       "name": "packer-ingecloud-01",
       "communicator": "ssh",
-	  "type": "scaleway",
-	  "organization_id": "{{user `organization_id`}}",
-	  "api_token": "{{user `api_token`}}",
-	  "image": "f974feac-abae-4365-b988-8ec7d1cec10d",
-	  "image_name": "packer-ingecloud-01",
-	  "region": "par1",
-	  "commercial_type": "DEV1-M",
-	  "ssh_username": "root"
+      "type": "scaleway",
+      "organization_id": "{{user `organization_id`}}",
+      "api_token": "{{user `api_token`}}",
+      "image": "f974feac-abae-4365-b988-8ec7d1cec10d",
+      "image_name": "packer-ingecloud-01",
+      "region": "par1",
+      "commercial_type": "DEV1-M",
+      "ssh_username": "root"
     }
   ],
   "provisioners": [
@@ -28,7 +28,7 @@
   ],
   "variables": {
     "user_name":"packer-form",
-	"organization_id": "{{env `organization_id`}}",
-	"api_token": "{{env `api_token`}}"
+    "organization_id": "{{env `organization_id`}}",
+    "api_token": "{{env `api_token`}}"
   }
 }
