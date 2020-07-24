@@ -1,7 +1,6 @@
 ---
 image:
   name: "alpine"
-
   entrypoint:
    - "/usr/bin/env"
    - "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
@@ -10,7 +9,7 @@ before_script:
    - apt update && apt install -y wget unzip
    - wget https://releases.hashicorp.com/packer/1.6.0/packer_1.6.0_linux_amd64.zip
    - unzip packer_1.6.0_linux_amd64.zip
-   - mv packer /usr/local/bin/
+   - cp packer /usr/local/bin/
    - pwd
    - packer -v
 
@@ -19,6 +18,5 @@ stages:
 
 build:
   stage: build
-
   script:
     - packer build packer.json

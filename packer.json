@@ -22,7 +22,7 @@
         "apt-get update",
 	"apt-get install -y apt-utils",
         "apt-get install -y tree && apt-get install -y htop",
-        "useradd -m -u 6000 {{user `user_name`}}"
+        "useradd -m -u 6000 packer-form"
       ]
     }
   ],
